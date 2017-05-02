@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Steven Turner Lab 12</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body ng-app="ourModule" ng-controller="ourController">
+    <h1> Create Your Personal To-Do List</h1>
+
+   <div class="box">
+      <input class="words" type="text" placeholder="Enter tasks..." ng-model="item">
+      <button class="click" type="button" ng-click="addItem(item)"><b>Add Task<b></button>
+
+      <div class="text" ng-repeat="item in toDoList | filter: item">
+        <ul id="list">{{item}}</ul
+
+      </div>
+   </div>
+
+
+
+
+    <script src= "https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="script.js" charset="utf-8"></script>
+  </body>
+</html>
